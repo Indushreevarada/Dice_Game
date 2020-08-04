@@ -1,3 +1,218 @@
 .body{
     background-color:grey;
 }
+
+#dice {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: spin 50s infinite linear;
+}
+.side {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    box-shadow:inset 0 0 40px #ccc;
+    border-radius: 40px;
+}
+#dice .cover, #dice .inner {
+    background: #e0e0e0;
+    box-shadow: none;
+}
+#dice .cover {
+    border-radius: 0;
+    transform: translateZ(0px);
+}
+#dice .cover.x {
+    transform: rotateY(90deg);
+}
+#dice .cover.z {
+    transform: rotateX(90deg);
+}
+#dice .front  {
+    transform: translateZ(100px);
+}
+#dice .front.inner  {
+    transform: translateZ(98px);
+}
+#dice .back {
+    transform: rotateX(-180deg) translateZ(100px);
+}
+#dice .back.inner {
+    transform: rotateX(-180deg) translateZ(98px);
+}
+#dice .right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+#dice .right.inner {
+    transform: rotateY(90deg) translateZ(98px);
+}
+#dice .left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+#dice .left.inner {
+    transform: rotateY(-90deg) translateZ(98px);
+}
+#dice .top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+#dice .top.inner {
+    transform: rotateX(90deg) translateZ(98px);
+}
+#dice .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+#dice .bottom.inner {
+    transform: rotateX(-90deg) translateZ(98px);
+}
+.dot {
+    position:absolute;
+    width:46px;
+    height:46px;
+    border-radius:23px;
+    background:#444;
+    box-shadow:inset 5px 0 10px #000;
+}
+.dot.center {
+    margin:77px 0 0 77px;
+}
+.dot.dtop {
+    margin-top:20px;
+}
+.dot.dleft {
+    margin-left:134px;
+}
+.dot.dright {
+    margin-left:20px;
+}
+.dot.dbottom {
+    margin-top:134px;
+}
+.dot.center.dleft {
+    margin:77px 0 0 20px;
+}
+.dot.center.dright {
+    margin:77px 0 0 134px;
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: "Lato";
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    -webkit-transition: background-color 0.5s ease, color 0.3s ease;
+    -moz-transition: background-color 0.5s ease, color 0.3s ease;
+    -ms-transition: background-color 0.5s ease, color 0.3s ease;
+    -o-transition: background-color 0.5s ease, color 0.3s ease;
+    transition: background-color 0.5s ease, color 0.3s ease;
+  }
+  
+  button:hover {
+    font-weight: 600;
+  }
+  
+  button:hover i {
+    margin-right: 20px;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  i {
+    color: #eb4d4d;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    -webkit-transition: margin 0.3s ease;
+    -moz-transition: margin 0.3s ease;
+    -ms-transition: margin 0.3s ease;
+    -o-transition: margin 0.3s ease;
+    transition: margin 0.3s ease;
+  }
+  
+  .btn-new {
+    top: 45px;
+  }
+  
+  .btn-roll {
+    top: 505px;
+  }
+
+.player-1,
+.player-2 {
+  width: 50%;
+  float: left;
+  height: 600px;
+  padding: 100px;
+  background: darkgray;
+  color: beige;
+}
+
+.name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 200;
+    color: #eb4d4d;
+    margin-bottom: 130px;
+  }
+  
+  .turns {
+  text-align: center;
+}
+
+.score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 200;
+    color: #eb4d4d;
+    margin-bottom: 130px;
+  }
+
+  .parent{
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: white;
+    -webkit-box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    clear: both;
+    display: table;
+    content: "";
+  }
