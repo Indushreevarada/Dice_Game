@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -13,73 +13,104 @@
 
 <body>
     <video id="video" autoplay muted loop plays-inline>
-        <source src="./Confetti Loop no Alpha - Enchanted Media.mp4" type="video/mp4">
-        </source>
-    </video>
-    <div class="parent">
-        <div class="player-1">
-            <div class="turns">Turns left: <span id='turns-0'>5</span></div>
-            <div class="name" id="name-1">Player 1</div>
-            <div class="score" id="score-1">50</div>
-        </div>
-        <div class="player-2">
-            <div class='turns'>Turns left: <span id='turns-1'>5</span></div>
-            <div class="name" id="name-2">Player 2</div>
-            <div class="score" id="score-2">50</div>
-        </div>
-        <div id="dice">
-            <div class="side front">
-                <div class="dot center"></div>
-            </div>
-            <div class="side front inner"></div>
-            <div class="side top">
-                <div class="dot dtop dleft"></div>
-                <div class="dot dbottom dright"></div>
-            </div>
-            <div class="side top inner"></div>
-            <div class="side right">
-                <div class="dot dtop dleft"></div>
-                <div class="dot center"></div>
-                <div class="dot dbottom dright"></div>
-            </div>
-            <div class="side right inner"></div>
-            <div class="side left">
-                <div class="dot dtop dleft"></div>
-                <div class="dot dtop dright"></div>
-                <div class="dot dbottom dleft"></div>
-                <div class="dot dbottom dright"></div>
-            </div>
-            <div class="side left inner"></div>
-            <div class="side bottom">
-                <div class="dot center"></div>
-                <div class="dot dtop dleft"></div>
-                <div class="dot dtop dright"></div>
-                <div class="dot dbottom dleft"></div>
-                <div class="dot dbottom dright"></div>
-            </div>
-            <div class="side bottom inner"></div>
-            <div class="side back">
-                <div class="dot dtop dleft"></div>
-                <div class="dot dtop dright"></div>
-                <div class="dot dbottom dleft"></div>
-                <div class="dot dbottom dright"></div>
-                <div class="dot center dleft"></div>
-                <div class="dot center dright"></div>
-            </div>
-            <div class="side back inner"></div>
-            <div class="side cover x"></div>
-            <div class="side cover y"></div>
-            <div class="side cover z"></div>
+        <source src="./Confetti Loop no Alpha - Enchanted Media.mp4" type="video/mp4"></source> 
+    </video> 
+    <div class="wrapper clearfix">
+        <div class="player-0-panel active">
+            <div class='player-turns-0'>Turns left: <span id='turns-0'>5</span></div>
+            <div class="player-name" id="name-0">Player 1</div>
+            <div class="player-score" id="score-0">50</div>
         </div>
 
+        <div class="player-1-panel">
+            <div class='player-turns-1'>Turns left: <span id='turns-1'>5</span></div>
+            <div class="player-name" id="name-1">Player 2</div>
+            <div class="player-score" id="score-1">50</div>
+        </div>
+
+
+        <div class="dice">
+            <ol class="die-list die-list-0 even-roll" data-roll="1" id="die-0">
+                <li class="die-item" data-side="1">
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="2">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="3">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="4">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="5">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="6">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+            </ol>
+            <ol class="die-list die-list-0 odd-roll" data-roll="1" id="die-1">
+                <li class="die-item" data-side="1">
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="2">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="3">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="4">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="5">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="6">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+            </ol>
+        </div>
+
+
+        <button class="btn-new">
+            <i class="ion-ios-plus-outline"></i> New Game
+        </button>
+        <button class="btn-roll" id='roll-button'>
+            <i class="ion-ios-loop"></i> Dice Roll
+        </button>
     </div>
-    </div>
-    <button class="btn-new">
-        <i class="ion-ios-plus-outline"></i> New Game
-    </button>
-    <button class="btn-roll" id='roll-button'>
-        <i class="ion-ios-loop"></i> Dice Roll
-    </button>
+    <script src="app.js"></script>
 </body>
 
 </html>
